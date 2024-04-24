@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: #0070d8;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: #0070d8;
+    --radius: 0.5rem;
+    --danger: #c00000;
+    --success: #36c000;
+    --muted: #eeeeee;
+  }
+}
+
+.rs-modal-content {
+  padding: 0px !important;
+}
+
+button {
+  padding-inline: 8px;
+  padding-block: 8px;
+  border-radius: 8px;
+  font-weight: normal !important;
+  font-size: 13px;
+}
+
+.btn {
+  height: 40px;
+  padding-inline: 14px;
+  padding-block: 10px;
+  border-radius: 8px;
+  background-color: var(--muted);
+  font-weight: normal !important;
+  font-size: 13px;
+}
+
+.p-dropdown {
+  border-color: #ddd !important;
+  border-width: 1px !important;
+  padding: 0px !important;
+  font-size: 12px !important;
+}
+
+.p-dropdown-label {
+  padding: 5.0px !important;
+  font-size: 14px !important;
+}
+
+.p-dropdown-panel {
+  width: 100px !important;
+}
+
+.p-multiselect {
+  border-color: #ddd !important;
+  border-width: 1px !important;
+  padding: 0px !important;
+  font-size: 12px !important;
+  height: 32px;
+}
+
+.p-multiselect-label {
+  padding: 5px !important;
+  font-size: 14px !important;
+  margin: 'auto';
+}
+
+.p-multiselect-token {
+  padding: 1px;
+  padding-inline-start: 10px;
+}
+
+.p-multiselect-panel {
+  width: 100px !important;
+}
+
+.p-datepicker-group {
+  font-size: 10px;
+}
+
+.p-datepicker-calendar>tbody>tr>td {
+  padding: 0px;
+  width: 0px !important;
+  height: 0px !important;
+  font-size: 13px;
+}
+
+.p-datepicker-calendar>thead>tr>th {
+  padding: 5px;
+
+}
+
+.p-datepicker-calendar>thead>tr>th>span {
+  padding: 0px;
+  height: 30px !important;
+
+  font-size: 13px !important;
+}
+
+.p-datepicker-calendar>tbody>tr>td>span {
+  padding: 0px;
+  height: 30px !important;
+}
+
+.p-inputnumber-input {
+  max-width: 100% !important;
+}
+
+.p-placeholder {
+  padding-inline: 20px !important;
+  align-self: center !important;
+  font-size:  12px !important;
+}
+
+input {
+  border-color: #ddd;
+  border-width: 1px;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.p-button-label {
+  font-weight: normal;
+}
+
+.p-multiselect {
+  border-color: #ddd;
+  border-width: 1px;
+}
+
+.h1 {
+  font-weight: 700;
+  color: #444444;
+  font-size: 32px;
+}
+
+.h2 {
+  font-weight: 700;
+  color: #444444;
+  font-size: 19px;
+}
