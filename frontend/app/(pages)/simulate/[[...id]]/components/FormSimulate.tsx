@@ -9,6 +9,7 @@ import { Dropdown } from "primereact/dropdown";
 import Button from "@/components/Button";
 import { cn } from "@/lib/utils";
 import FieldMoney from "@/components/FieldMoney";
+import { useEffect } from "react";
 
 interface IProps {
     className?: string;
@@ -23,6 +24,12 @@ export default function FormSimulate({ className }: IProps) {
     const handle = (data: TFormSimulate) => {
         console.log(data);
     };
+
+    const getVehicles
+
+    useEffect(() => {
+
+    },[])
 
     return (
         <form

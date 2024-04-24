@@ -1,3 +1,4 @@
+'use client'
 import { Calendar, Cog, Gauge, MapPin } from "lucide-react";
 import Image from "next/image";
 

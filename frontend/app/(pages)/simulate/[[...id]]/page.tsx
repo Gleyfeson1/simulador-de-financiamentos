@@ -3,8 +3,11 @@ import Line from "@/components/Line";
 import CardProduct from "./components/CardProduct";
 import CardParcel from "./components/CardParcel";
 import Button from "@/components/Button";
+import api from "@/lib/api";
 
-export default function Simulate() {
+export default async function Simulate() {
+  
+
   return (
     <div className="p-4 md:p-12 lg:p-12">
       <div className="mt-14 mb-10">
@@ -22,7 +25,7 @@ export default function Simulate() {
       <div className="grid grid-cols-12 gap-4 mt-14">
         <div className="col-span-12 md:col-span-5 lg:col-span-3">
           <CardProduct
-            src={require("../../../../../public/images/vehicles/uno.png")}
+            src={''}
             name="Volkswagen T-Cross"
             city="Belo horizonte"
             description="1.0 200 TSI Total Flex Comfortline"

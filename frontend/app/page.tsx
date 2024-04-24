@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import pages from "./contants/routes";
+import pages from "./constants/pages";
 
 export default function Home() {
   return (

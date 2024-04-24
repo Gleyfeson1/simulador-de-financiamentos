@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
 
+  # Web Server Service
   nginx:
     image: nginx:alpine
     container_name: nginx
@@ -23,8 +24,8 @@ services:
   #   ports:
   #     - "3306:3306"
   #   environment:
-  #     MYSQL_DATABASE: listra
-  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: blog
+  #     MYSQL_ROOT_PASSWORD: password
   db:
     image: postgres
     container_name: postgres
@@ -37,6 +38,7 @@ services:
       POSTGRES_USER: root 
       POSTGRES_PASSWORD: root 
 
+  # Application Service
   app:
     container_name: listra
     build: 
