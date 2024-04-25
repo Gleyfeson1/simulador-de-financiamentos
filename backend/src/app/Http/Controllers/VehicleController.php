@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
+use Throwable;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 
@@ -22,7 +24,34 @@ class VehicleController extends Controller
 
     public function find($vehicleId)
     {
-        return Vehicle::findOrFail($vehicleId);
+        return Vehicle::find($vehicleId);
+    }
+
+    public function simulate(Request $request)
+    {
+        try {
+            $vehicleId = $request->input("vehicleId");
+            $entryValue = $request->input("entryValue");
+            $vehicle = Vehicle::find($vehicleId);
+            if ($entryValue > $vehicle->price) {
+                throw new Exception("Entrada maior que o valor do veículo", 1);
+            }
+            $six = self::simulateParcel($entryValue, $vehicle->price, 6);
+            $six = self::simulateParcel($entryValue, $vehicle->price, 12);
+            $six = self::simulateParcel($entryValue, $vehicle->price, 48);
+            // $simulated = [
+            //     "six" => 
+            // ]
+
+            return response()->json($vehicle, 200);
+        } catch (Exception $e) {
+            return response()->json($e->getMessage(), 500);
+        }
+    }
+
+    public function simulateParcel($entry, $price, $parcel)
+    {
+        return ($price - $entry) / $parcel;
     }
 
     /**

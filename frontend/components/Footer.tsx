@@ -1,4 +1,9 @@
 import Button from "./Button";
+import whatsapp_white from "../public/images/social/whatsapp_white.svg"
+import facebook_white from "../public/images/social/facebook_white.svg"
+import instagram_white from "../public/images/social/instagram_white.svg"
+import linkedin_white from "../public/images/social/linkedin_white.svg"
+import twitter_white from "../public/images/social/twitter_white.svg"
 
 const Footer = () => {
   return (
@@ -45,7 +50,7 @@ const Footer = () => {
           </div>
           <Button
             className="bg-green-500 "
-            src={require("../public/images/social/whatsapp_white.svg")}
+            src={whatsapp_white}
           />
         </div>
       </div>
@@ -54,19 +59,19 @@ const Footer = () => {
         <div className="flex gap-2">
           <Button
             className="h-7 w-7"
-            src={require("../public/images/social/facebook_white.svg")}
+            src={facebook_white}
           />
           <Button
             className="h-7 w-7"
-            src={require("../public/images/social/instagram_white.svg")}
+            src={instagram_white}
           />
           <Button
             className="h-7 w-7"
-            src={require("../public/images/social/twitter_white.svg")}
+            src={twitter_white}
           />
           <Button
             className="h-7 w-7"
-            src={require("../public/images/social/linkedin_white.svg")}
+            src={linkedin_white}
           />
         </div>
       </div>
@@ -78,7 +83,7 @@ const Footer = () => {
           </div>
           <Button
             className="bg-green-500 "
-            src={require("../public/images/social/whatsapp_white.svg")}
+            src={whatsapp_white}
           />
         </div>
       </div>

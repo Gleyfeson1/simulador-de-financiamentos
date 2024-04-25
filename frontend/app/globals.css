@@ -122,10 +122,17 @@ button {
   max-width: 100% !important;
 }
 
+/* p-dropdown-label  */
+.p-inputtext {
+  padding-inline: 20px !important;
+  align-self: center !important;
+  font-size: 12px !important;
+}
+
 .p-placeholder {
   padding-inline: 20px !important;
   align-self: center !important;
-  font-size:  12px !important;
+  font-size: 12px !important;
 }
 
 input {
