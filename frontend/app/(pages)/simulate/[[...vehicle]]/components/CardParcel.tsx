@@ -1,3 +1,5 @@
+import { formatMoney } from "@/lib/utils";
+
 interface IProps {
   parcel: number;
   value: number;
@@ -12,7 +14,7 @@ const CardParcel = ({ parcel, value, hasIPVA }: IProps) => {
           {parcel}x
         </span>
         <span className="font-semibold text-violet-700 text-[25px]">
-          R$ {value}
+          {formatMoney(value)}
         </span>
       </div>
       {hasIPVA && (

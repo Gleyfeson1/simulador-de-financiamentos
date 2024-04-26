@@ -17,6 +17,7 @@ export async function vehiclesFind(vehicleId: number) {
     const route = routes.vehiclesFind.replace("{vehicleId}", String(vehicleId))
     const { data, status } = await api.get(route)
     if (status == 200) {
+        // revalidatePath(pages.simulate)
         return data
     }
     throw new Error(`Error ${status}`);
@@ -25,8 +26,7 @@ export async function vehiclesFind(vehicleId: number) {
 export async function vehicleSimulate(vehicle: { vehicleId: number, entryValue: number }) {
     const { data, status } = await api.post(routes.vehicleSimulate, vehicle)
     if (status == 200) {
-        console.log(data, "recebendo da api");
-        revalidatePath(pages.simulate)
+        // revalidatePath(pages.simulate)
         return data
     }
     throw new Error(`Error ${status}`);

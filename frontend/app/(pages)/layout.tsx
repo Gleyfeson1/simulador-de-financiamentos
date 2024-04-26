@@ -19,7 +19,7 @@ export default async function RootLayout({
   return (
     <main className="flex min-h-screen flex-col bg-slate-100">
       <Header />
-      <div className=" mt-[64px] ">{children}</div>
+      <div className="mt-[64px] flex-1">{children}</div>
       <Footer />
     </main>
   );

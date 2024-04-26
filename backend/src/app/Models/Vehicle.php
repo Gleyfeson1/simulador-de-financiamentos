@@ -9,7 +9,7 @@ class Vehicle extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['photo', 'city', 'brand', 'model', 'description', 'year', 'gearbox', 'phone', 'price'];
+    protected $fillable = ['photo', 'city', 'brand', 'model', 'description', 'year', 'gearbox', 'km', 'phone', 'price'];
 
     public function inputs($object)
     {
@@ -60,10 +60,5 @@ class Vehicle extends Model
     {
         // TODO: Implement log() method.
     }
-
-
-    
-
-
 
 }

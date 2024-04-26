@@ -33,17 +33,22 @@ class VehicleController extends Controller
             $vehicleId = $request->input("vehicleId");
             $entryValue = $request->input("entryValue");
             $vehicle = Vehicle::find($vehicleId);
+
             if ($entryValue > $vehicle->price) {
                 throw new Exception("Entrada maior que o valor do veículo", 1);
             }
-            $six = self::simulateParcel($entryValue, $vehicle->price, 6);
-            $six = self::simulateParcel($entryValue, $vehicle->price, 12);
-            $six = self::simulateParcel($entryValue, $vehicle->price, 48);
-            // $simulated = [
-            //     "six" => 
-            // ]
 
-            return response()->json($vehicle, 200);
+            $six = self::simulateParcel($entryValue, $vehicle->price, 6);
+            $twelve = self::simulateParcel($entryValue, $vehicle->price, 12);
+            $fortyEight = self::simulateParcel($entryValue, $vehicle->price, 48);
+
+            $simulated = [
+                "six" => round($six, 2),
+                "twelve" => round($twelve, 2),
+                "fortyEight" => round($fortyEight, 2)
+            ];
+
+            return response()->json($simulated, 200);
         } catch (Exception $e) {
             return response()->json($e->getMessage(), 500);
         }

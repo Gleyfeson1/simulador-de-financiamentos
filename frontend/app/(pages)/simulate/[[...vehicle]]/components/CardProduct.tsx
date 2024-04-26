@@ -1,4 +1,6 @@
 'use client'
+import gearBox from "@/app/constants/enums";
+import { formatMoney } from "@/lib/utils";
 import { Calendar, Cog, Gauge, MapPin } from "lucide-react";
 import Image from "next/image";
 
@@ -34,8 +36,8 @@ const CardProduct = ({
           src={src}
           className="flex flex-1"
           alt="Veículo"
-          // width={300}
-          // height={151}
+        // width={300}
+        // height={151}
         />
       </div>
       <div className="p-4 text-[#444444] flex flex-1 flex-col">
@@ -55,11 +57,11 @@ const CardProduct = ({
 
           <div className="flex items-center gap-2">
             <Cog size={20} />
-            {type}
+            {Object.values(gearBox).find(({ id }) => parseInt(type) === id)?.type}
           </div>
         </div>
         <p className="text-[26px] font-semibold mt-4 text-[#444444]">
-          R$ {price}
+          {formatMoney(price)}
         </p>
       </div>
     </div>
